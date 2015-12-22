@@ -1,0 +1,20 @@
+language: python
+python:
+- 2.7
+- 3.4
+install:
+- pip install flask coveralls
+- python setup.py install
+script:
+- python test_gief.py
+- coverage run --source=gief test_gief.py
+after_success:
+- coveralls
+deploy:
+  provider: pypi
+  user: jorgebg
+  password:
+    secure: DK9MAwOgKf7Er/cjxaqnOgBKXkx/Jx2yqmE8JfaCE9Gwsnr/WN1gj0eu++YuxhL3n1PWhgK9KpLjlumXvJI/kDk2lEHQ1ID06ySYtbQbZfsnEzn/miEr/kQ4od5ML4mF9PD/DRCYlm2SC2sg2iD4fooGKHmHmsxH9C+/CRv3dA87XKtwAGPr8RvZT1kUNk++dF2/Z/5jAfF1h40mKn7VMD2AVMLGBtfRtpx6dMWinLn9vqU/SOgp/KUHZ/jeQdfyG/n4iUmC6s9IiRBK1Q3OMqsjIMItm2MYm6A0iQwxuyTXvfbiuIRApY3Q9xWsNDJ+dlUlIUObYkUrb7MYYiTTmWu94CONitLABLU941Q+JuTp60R5EBtdakklu0wrpesGriEwYYFgaiLRIDmMy7D6qF2OQK5hRqEzLuBtSEN22QkZDgjt4EZGfsKWJ91xku1xh1N/NllTOEP8t8PxYqdl2iBDq6/fgNL9WkkmYUl48t7HN0n+2kFaTGUiHG82qo5GkdyqzoZlnxmnsQBBhlpN0lgVclrbLYclXnsso49sol6SC1L1IpKDqukcbpFdg83cAXd4H3oeCT+cqZ2glrLFASvX60VFF4AoFCBvGTTa3Abq/X324JP+1/5OHODjmIH9o7drgynFI0BqbKO2S8XgZ79+rTY81O/kj9pK0AP4Ncs=
+  on:
+    tags: true
+    repo: jorgebg/gief
