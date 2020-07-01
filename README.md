@@ -6,7 +6,6 @@
 [![Coverage Status](https://coveralls.io/repos/jorgebg/gief/badge.svg)](https://coveralls.io/r/jorgebg/gief)
 [![MIT License](https://img.shields.io/pypi/l/gief.svg)](https://github.com/jorgebg/gief/blob/master/LICENSE)
 
-[![Stories in Ready](https://badge.waffle.io/jorgebg/gief.svg)](http://waffle.io/jorgebg/gief)
 
 Instant HTTP file uploading server.
 
