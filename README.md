@@ -31,6 +31,12 @@ optional arguments:
 
 ```
 
+Alternatively:
+
+```
+python -m gief
+```
+
 ### Examples
 ```
 mkdir /tmp/gief
